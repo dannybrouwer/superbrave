@@ -1,0 +1,311 @@
+$main-color: #65BAF7;
+$secondary-color: #dcdcdc;
+
+@font-face {
+	font-family: "Roboto Regular";
+	src: url('../fonts/Roboto-Regular.ttf');  
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Roboto Light";
+	src: url('../fonts/Roboto-Light.ttf');  
+	font-weight: normal;
+}
+
+body{
+	background-color: #F9F9F9;
+	font-family: "Roboto Light";
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 100;
+}
+.header{
+	margin-top: 30px;
+	.logo{
+		img{
+			max-width: 300px;
+		}
+	}
+	.contact{
+		float: right;
+		margin-top: 15px;
+		.phone{
+		    color: #000000;
+		    font-weight: 800;
+		    text-decoration: none;
+			&:before{
+				font-family: FontAwesome;
+				content: '\f095';
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
+.form-wrapper{
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	background-color: #ffffff;
+	padding-left: 0px;
+	padding-right: 0px;
+	select{
+	    width: 100%;
+	    padding: 10px;
+	    margin-top: 5px;
+	    margin-bottom: 10px;
+	    border-radius: 5px;
+	    border-color: $secondary-color;
+	}
+	.status{
+		padding: 30px;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		.status-title{
+			font-weight: 800;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		.step{
+			text-transform: uppercase;
+		}
+		.status-percentage{
+			width: 300px;
+		    height: 10px;
+		    border-radius: 10px;
+		    float: right;
+		    margin-top: 15px;
+		    position: relative;
+		    &:after{
+				position: absolute;
+				width: 70%;
+				left: 0px;
+				height: 10px;
+				background-color: $main-color;
+				border-radius: 10px;
+				content: '';
+				z-index: 1;
+		    }
+		    &:before{
+		    	position: absolute;
+				width: 100%;
+				right: 0px;
+				height: 10px;
+				background-color: $secondary-color;
+				border-radius: 10px;
+				content: '';
+		    }
+		    span{
+		    	position: relative;
+				top: 10px;
+				color: $secondary-color;
+		    }
+		}
+	}
+	.form{
+		padding: 30px;
+		.chosen{
+			h4{
+				font-weight: 800;
+				margin-bottom: 0px;
+			}
+			p{
+				margin-top: 0px;
+			}
+		}
+		.no-idea p {
+		    background-color: darken($main-color, 10%);
+		    color: #ffffff;
+		    padding: 20px 15px;
+		    font-weight: bold;
+		    &:after{
+		    	font-family: FontAwesome;
+		    	content: '\f178';
+		    	float:right;
+		    }
+		}
+		.more-info{
+			background-color: lighten($secondary-color, 10%);
+			font-family: "Roboto Regular";
+			.more-info-content{
+				padding: 0px 15px;
+				display: inline-block;
+				h3{
+					font-weight: 800;
+				}
+			}
+			.other-info{
+				background-color: $secondary-color;
+    			padding: 15px;
+    			h3{
+    				margin-top: 0px;
+    				margin-bottom: 0px;
+    				font-weight: 800;
+    				&:after{
+				    	font-family: FontAwesome;
+				    	content: '\f178';
+				    	padding-left: 10px;
+				    }
+    			}
+			}
+		}
+		.amount{
+			label{
+			    border: 1px solid $secondary-color;;
+			    padding: 10px;
+			    display: inline-block;
+			    border-radius: 3px;
+			    margin-right: 20px;
+			    position: relative;
+		    	&.checked{
+		    		border-color: $main-color;
+		    		&:after{
+					    border-radius: 100%;
+					    position: absolute;
+					    right: -10px;
+					    top: -10px;
+					    background-color: darken($main-color, 10%);
+					    content: '\f00c';
+					    font-family: FontAwesome;
+					    color: #ffffff;
+					    padding: 0px 3px;
+		    		}
+		    	}
+		    	input{
+	    			display: none;
+	    		}
+			}
+		}
+		.category-selection{
+			position: relative;
+			select{
+				outline: none;
+			}
+			&.selected{
+				select{
+					border-color: $main-color;
+				}
+				&:after{
+				    border-radius: 100%;
+				    position: absolute;
+				    right: -10px;
+				    top: 17px;
+				    background-color: darken($main-color, 10%);
+				    content: '\f00c';
+				    font-family: FontAwesome;
+				    color: #ffffff;
+				    padding: 0px 3px;
+				}
+			}
+		}
+		.product-selection{
+			position: relative;
+			select{
+				outline: none;
+			}
+			&.selected{
+				select{
+					border-color: $main-color;
+					&:selected{
+						outline: none;
+					}
+				}
+				&:after{
+				    border-radius: 100%;
+				    position: absolute;
+				    right: -10px;
+				    top: 17px;
+				    background-color: darken($main-color, 10%);
+				    content: '\f00c';
+				    font-family: FontAwesome;
+				    color: #ffffff;
+				    padding: 0px 3px;
+				}
+			}
+		}
+	}
+	.navigation{
+		border-top: 1px solid rgba(0,0,0,.1);
+		padding: 30px;
+		.return{
+			background-color: lighten($secondary-color, 10%);
+			padding: 10px 30px;
+			color: darken($secondary-color, 10%);
+			text-decoration: none;
+			display: inline-block;
+			font-weight: 800;
+		}
+		.next{
+			padding: 10px 15px;
+			background-color: #E56A1A;
+			color: #ffffff;
+			text-decoration: none;
+			float: right;
+			display: inline-block;
+			font-weight: 800;
+		}
+	}
+}
+
+.footer{
+	margin-top: 30px;
+	.contact-info{
+		background-color: $main-color;
+		padding: 20px 0px;
+		h1, h2, h3, h4, h5, h6, p, a , i{
+			color: #ffffff;
+		}
+		h3{
+			display: inline-block;
+			margin-right: 20px;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		.opening-hours{
+			text-align: right;
+			margin-top: 25px;
+		}
+		.contact-info-link{
+			display: inline-block;
+		    background-color: darken($main-color, 40%);
+		    padding: 10px;
+		    padding-right: 15px;
+		    border-radius: 5px;
+		    text-decoration: none;
+			transition: background-color 0.3s ease-in-out;
+			&:hover{
+				background-color: darken($main-color, 30%);
+			}
+		    &:before{
+		    	font-family: FontAwesome;
+			    content: '\f095';
+			    padding-right: 10px;
+		    }
+		}
+	}
+	.main-info{
+		background-color: lighten($main-color, 5%);
+		padding: 20px 0px;
+		h1, h2, h3, h4, h5, h6, p, a , i{
+			color: #ffffff;
+		}
+	}
+	.extra-info{
+		background-color: #ffffff;
+		padding: 15px 0px;
+		.payment-methods{
+			display: inline;
+			padding-left: 0px;
+			li{
+				display: inline;
+				img{
+					max-width: 80px;
+					margin-right: 20px;
+				}
+			}
+		}
+		iframe{
+			float: right;
+			margin-top: 10px;
+		}
+	}
+}
